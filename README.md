@@ -6,12 +6,6 @@ Getting started with Themosis and Vagrant
 An introduction to the Themosis framework while building a blog website.
 ------------------------------------------------------------------------
 
-[![don Pablo](https://miro.medium.com/fit/c/28/28/1*_-mwoCCZfJu3aZyP4eLkDQ.jpeg)](https://xn--dn-8bb.com/?source=post_page-----4732cfca938c-----------------------------------)
-
-don Pablo
-
-1 hour ago·5 min read
-
 ![](https://miro.medium.com/max/30/0*EuoywKype6cuWJqf.png?q=20)
 
 ![](https://miro.medium.com/max/623/0*EuoywKype6cuWJqf.png)
@@ -56,6 +50,8 @@ We recommend you to install their [LTS version](https://nodejs.org/en/) if you h
 
 ![](https://miro.medium.com/max/30/0*qiTqjPDehtPgTsQX.png?q=20)
 
+![](https://miro.medium.com/max/592/0*qiTqjPDehtPgTsQX.png)
+
 Create a new project
 ====================
 
@@ -70,6 +66,8 @@ Once the command is complete, a new Themosis framework project is created under 
 > _Initially the create-project command only takes one argument. In our example, if we omit the directory name, composer will store the project into a_ `_themosis_` _folder instead._
 
 ![](https://miro.medium.com/max/30/0*4525wRyb9WaeB6Rq.png?q=20)
+
+![](https://miro.medium.com/max/659/0*4525wRyb9WaeB6Rq.png)
 
 Setup local development environment
 ===================================
@@ -145,6 +143,8 @@ _Connect with me @donPabloNow on these other great platforms:_
 > _Hey, Are You Social? — Good Me too!_
 
 [_BANDLAB_](https://www.bandlab.com/donpablonow) _|_ [_DISPLAY_](http://Hey,%20come%20join%20me%20at%20Display,%20the%20social%20that%20pays!%20%20%20Tell%20them%20@donpablonow%20sent%20you.%20%20%20https//tsu.onelink.me/znrO?pid=af_app_invites&af_dp=tsuapp%3A%2F%2F&af_referrer_customer_id=746609&c=746609&af_referrer_name=donPabloNow&af_referrer_uid=746609&af_channel=tsu&af_referrer_image_url=https%3A%2F%2Fd2wutw6b039ws8.cloudfront.net%2Fusers%2Favatars%2F000%2F746%2F609%2Flarge%3F1630586132&af_siteid=social.tsu.android&is_retargeting=true&deep_link_value=746609) _|_ [_LOUDLY_](https://www.loudly.com/community/profiles/donpablonow) _|_ [_DRIBBLE_](https://dribbble.com/donpablonow) _|_ [_PINTREST_](https://www.pinterest.com/donPabloNow/) _|_ [_INSTAGRAM_](https://www.instagram.com/donpablonow/) _|_ [_GITHUB_](https://github.com/donPabloNow) _|_ [_FACEBOOK_](https://www.facebook.com/donpablonow) _|_ [_YOUTUBE_](https://www.youtube.com/c/donpablonow) _|_ [_TWITTER_](https://twitter.com/donPabloNow) _|_ [_LINKEDIN_](https://www.linkedin.com/in/donPabloNow/) _|_ [_TIKTOK_](https://www.tiktok.com/@donpablonow) _|_ [_CODEPEN_](https://codepen.io/donPabloNow) _|_ [_SOUNDCLOUND_](https://soundcloud.com/pablo-brincat) _|_ [_SPOTIFY_](https://open.spotify.com/user/21dhvyi7f7u6ozs7irfp2hkiy) _|_ [_SUSE_](https://community.suse.com/members/8757642) _|_ [_VERCEL_](https://vercel.co/donPabloNow)
+
+> [_@donPabloNow_](http://donpablonow/) _— for you! Give-a-Clap it’s win-win (Content+Claps=❤)_
 Themosis framework
 ==================
 
