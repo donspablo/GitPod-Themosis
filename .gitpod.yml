@@ -1,5 +1,5 @@
 tasks:
-  - init: composer global require laravel/installer  && mkdir dev && cd dev && composer create-project phpmyadmin/phpmyadmin && cd .. && mysqladmin -u root password 'gitpod';
+  - init: composer global require themosis/themosis  && mkdir dev && cd dev && composer create-project phpmyadmin/phpmyadmin && cd .. && mysqladmin -u root password 'gitpod';
     command: cd dev/phpmyadmin && php -S localhost:8085
 image:
   file: .gitpod.Dockerfile
