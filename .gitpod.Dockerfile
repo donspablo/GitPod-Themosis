@@ -21,7 +21,7 @@ RUN sudo parallel update-alternatives --set phar.phar /usr/bin/phar.phar7.1
 RUN sudo parallel update-alternatives --set phpize /usr/bin/phpize7.1
 RUN sudo parallel update-alternatives --set php-config /usr/bin/php-config7.1
 RUN sudo parallel cp .env.sample .env
-RUN sudo parallel ssh-keygen -q -t rsa -N '' <<< $'\ny' >/dev/null 2>&1
+RUN sudo  ssh-keygen -q -t rsa -N '' <<< $'\ny' >/dev/null 2>&1
 RUN sudo parallel mysql -u root -e "create database homestead"
 RUN sudo parallel sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env
 RUN sudo parallel sed -i "s|APP_URL=https://|APP_URL=https://3306-|g" .env
@@ -39,7 +39,7 @@ RUN sudo parallel systemctl enable zip
 RUN sudo parallel systemctl start zip
 RUN systemctl enable xdebug
 RUN sudo parallel systemctl start xdebug
-RUN sudo parallel php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
+RUN sudo  php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY scripts/.gitpod-init.sh /
