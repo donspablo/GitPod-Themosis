@@ -1,8 +1,8 @@
 FROM gitpod/workspace-mysql
 USER gitpod
-RUN     sudo su - && \
-        apt-get update && \
-        apt-get install -y \
+RUN     sudo && \
+        sudo apt-get update && \
+        sudo apt-get install -y \
         git \
         libzip-dev \
         libmemcached-dev \
@@ -12,8 +12,8 @@ RUN     sudo su - && \
         libjpeg-dev \
         libssl-dev \
         libmcrypt-dev \
-	&& apt-get clean \
-	&& curl --version
+	&& sudo apt-get clean \
+	&& sudo curl --version
 
 RUN docker-php-ext-install \
         mbstring \
@@ -22,7 +22,7 @@ RUN docker-php-ext-install \
         pdo_mysql \
         zip \
         opcache \
-    && pecl install xdebug \
+    && sudo pecl install xdebug \
     && docker-php-ext-enable zip \
     && docker-php-ext-enable xdebug
 
