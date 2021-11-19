@@ -32,8 +32,8 @@ RUN sudo  ssh-keygen -q -t rsa -N '' <<< $'\ny' >/dev/null 2>&1
 RUN sudo  mysql -u root -e "create database homestead"
 RUN sudo  sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env
 RUN sudo  sed -i "s|APP_URL=https://|APP_URL=https://3306-|g" .env
-RUN sudo  composer install  --ignore-platform-reqs
-RUN sudo  composer update  --ignore-platform-reqs
+RUN   composer install  --ignore-platform-reqs
+RUN   composer update  --ignore-platform-reqs
 RUN sudo  php vendor/bin/homestead make
 RUN sudo  vagrant box update
 RUN sudo  apt-get -y autoremove && sudo  apt-get clean
