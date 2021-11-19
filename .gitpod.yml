@@ -1,5 +1,5 @@
 tasks:
  - init: sudo apt-get update -y;
- - command: sudo rm -rf ${GITPOD_REPO_ROOT}   && composer create-project themosis/themosis ${GITPOD_REPO_ROOT}   && sudo composer global require themosis/themosis --ignore-platform-reqs;
+ - command: composer create-project themosis/themosis ${GITPOD_REPO_ROOT}   && sudo composer global require themosis/themosis --ignore-platform-reqs;
 image:
  file: .gitpod.Dockerfile
