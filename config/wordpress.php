@@ -19,14 +19,14 @@
 | @link https://api.wordpress.org/secret-key/1.1/salt/
 |
 */
-define('AUTH_KEY', 'MQ:ib$6axe;c3E-~v.#MH&,(>^HCMBRx/>5Kood2.6~|VTe0JvY{JDTa3tRbxXME');
-define('SECURE_AUTH_KEY', '&;n|8l05LluP|^4dC5+_#7I=%Kfay$Ai|q{??5G3$K|5&6A`6PPz<~d%3Y7=yf4D');
-define('LOGGED_IN_KEY', 'C)dRBd[gvouKt 3bw1NN(6E:0cT._u8qTf]f+ibYnZK&d-nSdFoo]`cG#JpH8[+/');
-define('NONCE_KEY', 'j:Vhwv) S;9,.KT?bSmc+`ITd Pb{ApLn7u 7;+&rFe;T|B,=x(>pLhbP-.kNqZ,');
-define('AUTH_SALT', '&k:c7++)iH/>T&,ghjb|aJ%3i[TtzjEL9Kf[N-FK[{-.cbtD%V=v+)8:KDTq%95A');
-define('SECURE_AUTH_SALT', '0KB^V$`&-NZO?,X0Ig|+La5x_GR/mFHfuw0]3,xXPs4rY@zfz!LIn|1-PeF8TW}b');
-define('LOGGED_IN_SALT', 'Waot*|GNr<6#ysgP|RIi(F+gGWzj*#LDK70 :L][3]<Yuu)5Sd:|Yl)Ri|[V-wfO');
-define('NONCE_SALT', '`4^le2ZZF~%Ed/g:?g1B300ycU}j-;&J!H`8B|Kn}nN&&IYdI}>sFd;gD3t<Rebe');
+const AUTH_KEY = 'MQ:ib$6axe;c3E-~v.#MH&,(>^HCMBRx/>5Kood2.6~|VTe0JvY{JDTa3tRbxXME';
+const SECURE_AUTH_KEY = '&;n|8l05LluP|^4dC5+_#7I=%Kfay$Ai|q{??5G3$K|5&6A`6PPz<~d%3Y7=yf4D';
+const LOGGED_IN_KEY = 'C)dRBd[gvouKt 3bw1NN(6E:0cT._u8qTf]f+ibYnZK&d-nSdFoo]`cG#JpH8[+/';
+const NONCE_KEY = 'j:Vhwv) S;9,.KT?bSmc+`ITd Pb{ApLn7u 7;+&rFe;T|B,=x(>pLhbP-.kNqZ,';
+const AUTH_SALT = '&k:c7++)iH/>T&,ghjb|aJ%3i[TtzjEL9Kf[N-FK[{-.cbtD%V=v+)8:KDTq%95A';
+const SECURE_AUTH_SALT = '0KB^V$`&-NZO?,X0Ig|+La5x_GR/mFHfuw0]3,xXPs4rY@zfz!LIn|1-PeF8TW}b';
+const LOGGED_IN_SALT = 'Waot*|GNr<6#ysgP|RIi(F+gGWzj*#LDK70 :L][3]<Yuu)5Sd:|Yl)Ri|[V-wfO';
+const NONCE_SALT = '`4^le2ZZF~%Ed/g:?g1B300ycU}j-;&J!H`8B|Kn}nN&&IYdI}>sFd;gD3t<Rebe';
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +47,7 @@ define('DB_COLLATE', config('database.connections.mysql.collation'));
 */
 define('WP_HOME', config('app.url'));
 define('WP_SITEURL', config('app.wp.url'));
-define('WP_CONTENT_URL', WP_HOME . '/' . CONTENT_DIR);
+const WP_CONTENT_URL = WP_HOME . '/' . CONTENT_DIR;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,21 +64,21 @@ define('SCRIPT_DEBUG', config('app.debug'));
 | WordPress auto-update
 |--------------------------------------------------------------------------
 */
-define('WP_AUTO_UPDATE_CORE', false);
+const WP_AUTO_UPDATE_CORE = false;
 
 /*
 |--------------------------------------------------------------------------
 | WordPress file editor
 |--------------------------------------------------------------------------
 */
-define('DISALLOW_FILE_EDIT', true);
+const DISALLOW_FILE_EDIT = true;
 
 /*
 |--------------------------------------------------------------------------
 | WordPress default theme
 |--------------------------------------------------------------------------
 */
-define('WP_DEFAULT_THEME', 'themosis-starter-theme');
+const WP_DEFAULT_THEME = 'themosis-starter-theme';
 
 /*
 |--------------------------------------------------------------------------

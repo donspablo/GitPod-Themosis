@@ -6,12 +6,6 @@
 
 
 // Media alignment
-.alignnone {
-    max-width: 100%;
-    height: auto;
-    margin-right: 0;
-    margin-left: 0;
-}
 
 .aligncenter {
     display: block;
@@ -63,6 +57,7 @@
     margin-bottom: 1.5em;
 }
 
+//noinspection DuplicatedCode
 .gallery-item {
     display: inline-block;
     vertical-align: top;
@@ -109,11 +104,3 @@
 
 // TinyMCE
 // WYSIWYG styles
-.mce-content-body {
-    margin: 10px;
-
-    a {
-        color: $blue;
-        text-decoration: underline;
-    }
-}

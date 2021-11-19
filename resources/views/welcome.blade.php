@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" lang="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +30,7 @@
             margin: 0 auto;
         }
 
+        /*noinspection CssOverwrittenProperties*/
         .themosis {
             color: #253143;
             font-size: 48px;
@@ -39,6 +40,7 @@
             margin: 16px 0 0;
         }
 
+        /*noinspection CssOverwrittenProperties*/
         .baseline {
             color: #666666;
             font-size: 13px;
@@ -60,6 +62,7 @@
             margin: 0 16px;
         }
 
+        /*noinspection CssOverwrittenProperties*/
         .links li a, .links li a:active, .links li a:visited {
             color: #666666;
             font-size: 16px;

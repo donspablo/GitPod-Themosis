@@ -1,4 +1,7 @@
-<?php
+<?php /** @noinspection PhpMethodParametersCountMismatchInspection */
+/** @noinspection PhpMethodParametersCountMismatchInspection */
+/** @noinspection PhpMethodParametersCountMismatchInspection */
+
 /*
 Plugin Name: WP cleanup.
 Plugin URI: https://donpablonow.com

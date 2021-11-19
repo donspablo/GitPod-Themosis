@@ -9,6 +9,8 @@ namespace App\Theme;
  *
  * @param string $menu_location
  * @return array
+ * @noinspection DuplicatedCode
+ * @noinspection DuplicatedCode
  */
 function get_menu_items($menu_location = '')
 {
@@ -21,6 +23,7 @@ function get_menu_items($menu_location = '')
         foreach ($menu_items as $item) {
             // var_dump($item);
             if (empty($item->menu_item_parent)) {
+                /** @noinspection DuplicatedCode */
                 $menu_array[$item->ID] = array();
                 $menu_array[$item->ID]['ID'] = $item->ID;
                 $menu_array[$item->ID]['title'] = $item->title;
@@ -35,6 +38,7 @@ function get_menu_items($menu_location = '')
         $submenu = array();
         foreach ($menu_items as $item) {
             if (!empty($item->menu_item_parent)) {
+                /** @noinspection DuplicatedCode */
                 $submenu[$item->ID] = array();
                 $submenu[$item->ID]['ID'] = $item->ID;
                 $submenu[$item->ID]['title'] = $item->title;
