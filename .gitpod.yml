@@ -11,11 +11,7 @@ tasks:
       && sudo update-alternatives --set phpize /usr/bin/phpize7.1 \
       && sudo update-alternatives --set php-config /usr/bin/php-config7.1 \
       && sudo composer global require themosis/themosis --ignore-platform-reqs \
-      && sudo mkdir dev \
-      && cd dev \
-      && sudo composer create-project phpmyadmin/phpmyadmin \
-      && cd .. \
       && sudo mysqladmin -u root password 'gitpod';
- - command: cd dev/phpmyadmin && php -S localhost:8085
+ - command: php -S localhost:8085
 image:
  file: .gitpod.Dockerfile
