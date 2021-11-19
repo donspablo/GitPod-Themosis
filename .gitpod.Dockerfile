@@ -1,9 +1,6 @@
 FROM gitpod/workspace-mysql
 USER gitpod
 
-RUN sudo docker-php-ext-install mysqli
-RUN sudo docker-php-ext-install mbstring
-
 RUN sudo apt-get -y autoremove && sudo apt-get clean
 RUN sudo apt-get install -y php5-apcu
 
