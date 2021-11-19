@@ -33,9 +33,6 @@ RUN sudo parallel a2ensite default-ssl
 RUN sudo parallel apt-get install
 RUN sudo parallel systemctl enable zip
 RUN sudo parallel systemctl start zip
-RUN sudo parallel systemctl start xdebug
-RUN sudo  php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
-RUN rm -rf /var/lib/apt/lists/*
 
 COPY scripts/.gitpod-init.sh /
 RUN sudo chmod +x /setup.sh
