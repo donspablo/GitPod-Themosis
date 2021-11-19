@@ -2,7 +2,7 @@ FROM gitpod/workspace-mysql
 USER gitpod
 
 RUN sudo  apt-get update && \
-RUN sudo  apt-get install -y \
+sudo  apt-get install -y \
 git \
 libzip-dev \
 libmemcached-dev \
