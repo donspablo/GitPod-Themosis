@@ -24,8 +24,6 @@ RUN sudo parallel cp .env.sample .env
 RUN sudo parallel mysql -u root -e "create database homestead"
 RUN sudo parallel sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env
 RUN sudo parallel sed -i "s|APP_URL=https://|APP_URL=https://3306-|g" .env
-RUN composer install --ignore-platform-reqs
-RUN composer update --ignore-platform-reqs
 RUN sudo parallel php vendor/bin/homestead make
 RUN sudo parallel vagrant box update
 RUN sudo parallel apt-get -y autoremove
@@ -36,13 +34,13 @@ RUN sudo parallel apt-get install
 RUN pecl install xdebug
 RUN sudo parallel systemctl enable zip
 RUN sudo parallel systemctl start zip
-RUN systemctl enable xdebug
+RUN sudo systemctl enable xdebug
 RUN sudo parallel systemctl start xdebug
 RUN sudo  php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY scripts/.gitpod-init.sh /
-RUN sudo parallel chmod +x /setup.sh
+RUN sudo chmod +x /setup.sh
 CMD ["/setup.sh"]
 CMD ["/bin/rm", "-f", "/var/run/apache2/apache2.pid"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
