@@ -35,7 +35,7 @@ RUN sudo parallel systemctl enable zip
 RUN sudo parallel systemctl start zip
 
 COPY scripts/.gitpod-init.sh /
-RUN sudo chmod +x /gitpod-init.sh
+RUN sudo chmod +x /.gitpod-init.sh
 CMD ["/setup.sh"]
 CMD ["/bin/rm", "-f", "/var/run/apache2/apache2.pid"]
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
