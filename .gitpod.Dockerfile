@@ -2,7 +2,7 @@ FROM gitpod/workspace-mysql
 USER gitpod
 
 RUN sudo apt-get update && \
-        apt-get install -y \
+        sudo apt-get install -y \
         git \
         libzip-dev \
         libmemcached-dev \
@@ -12,8 +12,8 @@ RUN sudo apt-get update && \
         libjpeg-dev \
         libssl-dev \
         libmcrypt-dev \
-	&& apt-get clean \
-	&& curl --version
+	&& sudo apt-get clean \
+	&& sudo curl --version
 
 RUN sudo docker-php-ext-install \
         mbstring \
@@ -22,9 +22,9 @@ RUN sudo docker-php-ext-install \
         pdo_mysql \
         zip \
         opcache \
-    && pecl install xdebug \
-    && docker-php-ext-enable zip \
-    && docker-php-ext-enable xdebug
+    && sudo pecl install xdebug \
+    && sudo docker-php-ext-enable zip \
+    && sudo docker-php-ext-enable xdebug
 
-RUN sudo php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
-    && rm -rf /var/lib/apt/lists/*
+RUN sudo php -r "readfile('http://getcomposer.org/installer');" | sudo php -- --install-dir=/usr/bin/ --filename=composer \
+    && sudo rm -rf /var/lib/apt/lists/*
