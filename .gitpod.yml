@@ -1,5 +1,5 @@
 tasks:
-  - init: composer global require themosis/themosis --ignore-platform-reqs  && mkdir dev && cd dev && composer create-project phpmyadmin/phpmyadmin && cd .. && mysqladmin -u root password 'gitpod';
+  - init: apt-get update &&     apt-get install php7.1 &&    apt-get install php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-zip php7.1-fpm php7.1-intl php7.1-simplexml &&    a2dismod php8.0 &&     a2enmod php7.1 &&    service apache2 restart &&    update-alternatives --set php /usr/bin/php7.1 &&    update-alternatives --set phar /usr/bin/phar7.1 && update-alternatives --set phar.phar /usr/bin/phar.phar7.1 &&     update-alternatives --set phpize /usr/bin/phpize7.1 &&     update-alternatives --set php-config /usr/bin/php-config7.1 && composer global require themosis/themosis --ignore-platform-reqs  && mkdir dev && cd dev && composer create-project phpmyadmin/phpmyadmin && cd .. && mysqladmin -u root password 'gitpod';
     command: cd dev/phpmyadmin && php -S localhost:8085
 image:
   file: .gitpod.Dockerfile
