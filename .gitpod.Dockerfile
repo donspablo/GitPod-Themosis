@@ -2,7 +2,6 @@ FROM gitpod/workspace-mysql
 USER gitpod
 
 RUN sudo apt-get -y autoremove && sudo apt-get clean
-RUN sudo apt-get install -y php5-apcu
 
 RUN sudo a2enmod rewrite
 RUN sudo a2enmod socache_shmcb || true
