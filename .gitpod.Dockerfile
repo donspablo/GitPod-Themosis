@@ -1,5 +1,6 @@
 FROM gitpod/workspace-mysql
 USER gitpod
+
 RUN sudo apt-get update && \
 sudo apt-get install -y \
 git \
@@ -19,7 +20,7 @@ zip \
 opcache \
 && sudo apt-get clean \
 && sudo curl --version \
-&& sudo RUN sudo apt upgrade -y
+&& sudo RUN sudo apt upgrade -y \
 && sudo add-apt-repository ppa:ondrej/php \
 && sudo apt-get update \
 && sudo apt-get install php7.1 \
@@ -36,8 +37,8 @@ opcache \
 && sudo ssh-keygen -q -t rsa -N '' <<< $'\ny' >/dev/null 2>&1 \
 && sudo mysql -u root -e "create database homestead" \
 && sudo sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env \
-&& sudo sed -i "s|APP_URL=https://|APP_URL=https://3306-|g" .env
-&& composer install --ignore-platform-reqs
+&& sudo sed -i "s|APP_URL=https://|APP_URL=https://3306-|g" .env \
+&& composer install --ignore-platform-reqs \
 && composer update --ignore-platform-reqs \
 && sudo php vendor/bin/homestead make \
 && sudo vagrant box update \
