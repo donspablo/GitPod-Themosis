@@ -1,7 +1,6 @@
 FROM gitpod/workspace-mysql
 USER gitpod
-RUN     sudo && \
-        sudo apt-get update && \
+RUN     sudo apt-get update && \
         sudo apt-get install -y \
         git \
         libzip-dev \
@@ -13,7 +12,7 @@ RUN     sudo && \
         libssl-dev \
         libmcrypt-dev \
 	&& sudo apt-get clean \
-	&& sudo curl --version
+	&& curl --version
 
 RUN docker-php-ext-install \
         mbstring \
@@ -27,5 +26,5 @@ RUN docker-php-ext-install \
     && docker-php-ext-enable xdebug
 
 #Install composer
-RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
-    && rm -rf /var/lib/apt/lists/*
+RUN sudo php -r "readfile('http://getcomposer.org/installer');" | sudo php -- --install-dir=/usr/bin/ --filename=composer \
+    && sudo rm -rf /var/lib/apt/lists/*
