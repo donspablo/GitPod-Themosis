@@ -97,24 +97,24 @@ The previous command will add the necessary files to your application so we can 
 
 By default, this Homestead configuration is setup for a Laravel project, so we need to do some tiny changes to make it work. Here is snippet on how your configuration file should look like:
 
-ip: 192.168.10.10  
-memory: 2048  
-cpus: 1  
-provider: virtualbox  
-authorize: ~/.ssh/id\_rsa.pub  
-keys:  
-- ~/.ssh/id\_rsa  
-folders:  
--  
-map: '/your/local/path/my-blog'  
-to: /home/vagrant/code  
-sites:  
--  
-map: my-blog.test  
-to: /home/vagrant/code/htdocs  
-databases:  
-- homestead  
-name: my-blog  
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id\_rsa.pub
+keys:
+- ~/.ssh/id\_rsa
+folders:
+-
+map: '/your/local/path/my-blog'
+to: /home/vagrant/code
+sites:
+-
+map: my-blog.test
+to: /home/vagrant/code/htdocs
+databases:
+- homestead
+name: my-blog
 hostname: my-blog
 
 Pay attention to the `sites` property. The `to` value is now pointing to the `htdocs` directory instead of the default `public` folder.
