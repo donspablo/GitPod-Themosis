@@ -2,6 +2,9 @@
 
 Getting started with Themosis and Vagrant
 =========================================
+<a href="https://gitpod.io/#https://github.com/donPabloNow/themosis"><img width="250px" src="https://user-images.githubusercontent.com/6468571/142190677-9676154b-33b6-424b-99cc-f10d88ad030c.png" /></a>
+
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/donPabloNow/themosis)
 
 An introduction to the Themosis framework while building a blog website.
 ------------------------------------------------------------------------
