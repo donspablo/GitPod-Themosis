@@ -1,11 +1,23 @@
 image:
- file: .gitpod.Dockerfile
+  file: .gitpod.Dockerfile
+
+ports:
+  # Laravel server
+  - port: 8000
+    onOpen: open-preview
+  # MySQL server
+  - port: 3306
+    onOpen: ignore
+
 tasks:
- - init: sudo apt update && \
-         sudo apt upgrade -y && \
-         sudo apt install php7.1 -y && \
-         sudo update-alternatives --set php /usr/bin/php7.1 && \
-         sudo update-alternatives --set phar /usr/bin/phar7.1 && \
-         sudo update-alternatives --set phar.phar /usr/bin/phar.phar7.1 && \
-         composer self-update --2 && \
-         composer install
+  - init: >
+      mysql -u root -e "create database example_app" &&
+      cp .env.example .env &&
+      sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env &&
+      sed -i "s|APP_URL=https://|APP_URL=https://8000-|g" .env &&
+      composer install &&
+      npm i &&
+      php artisan key:generate
+    command: >
+      php -S 0.0.0.0:8000 -t public
+    
