@@ -31,7 +31,6 @@ RUN sudo parallel apt-get clean
 RUN sudo parallel a2ensite default
 RUN sudo parallel a2ensite default-ssl
 RUN sudo parallel apt-get install
-RUN pecl install xdebug
 RUN sudo parallel systemctl enable zip
 RUN sudo parallel systemctl start zip
 RUN sudo systemctl enable xdebug
