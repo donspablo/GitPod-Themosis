@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Custom Branding
-Plugin URI: https://donpablonow.sk
+Plugin URI: https://donpablonow.com
 Description: Custom branding for WP websites created by donpablonow.
 Version: 1.0
 Author: donpablonow
@@ -88,7 +88,7 @@ function login_message()
 {
     echo '<p class="donpablonow-info">
         Website powered by <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a>
-        and created by <a href="https://donpablonow.sk" target="_blank" rel="noopener noreferrer">donpablonow</a>.
+        and created by <a href="https://donpablonow.com" target="_blank" rel="noopener noreferrer">donpablonow</a>.
     </p>';
 }
 
@@ -152,5 +152,5 @@ function menu_custom_logo()
 function admin_footer($content)
 {
     return 'Website powered by <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a>
-        and created by <a href="https://donpablonow.sk" target="_blank" rel="noopener noreferrer">donpablonow</a>';
+        and created by <a href="https://donpablonow.com" target="_blank" rel="noopener noreferrer">donpablonow</a>';
 }

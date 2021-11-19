@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: WP cleanup.
-Plugin URI: https://donpablonow.sk
+Plugin URI: https://donpablonow.com
 Description: Get rid of unnecessary WP ballast!
 Version: 1.0
 Author: donpablonow
-Author URI: https://donpablonow.sk
+Author URI: https://donpablonow.com
 License: GPLv2
 Domain Path: /languages/
 Text Domain: wbkn-wp-cleanup
