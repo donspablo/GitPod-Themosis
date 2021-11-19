@@ -1,20 +1,4 @@
-FROM gitpod/workspace-mysql
-USER gitpod
-
-RUN sudo apt-get update && \
-        sudo apt-get install -y \
-        git \
-        libzip-dev \
-        libmemcached-dev \
-        libz-dev \
-        curl \
-        libcurl4-gnutls-dev \
-        libjpeg-dev \
-        libssl-dev \
-        libmcrypt-dev \
-	&& sudo apt-get clean \
-	&& sudo curl --version \
-    \
+#!/bin/bash
 RUN sudo add-apt-repository ppa:ondrej/php
 RUN sudo apt-get update
 RUN sudo apt-get install php7.1
@@ -59,13 +43,3 @@ RUN sudo php -r "readfile('http://getcomposer.org/installer');" | php -- --insta
     && rm -rf /var/lib/apt/lists/*
 
 ADD . /var/www/project
-
-EXPOSE 80
-EXPOSE 443
-
-COPY scripts/.gitpod-init.sh /
-RUN sudo chmod +x /setup.sh
-CMD ["/setup.sh"]
-
-CMD ["/bin/rm", "-f", "/var/run/apache2/apache2.pid"]
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
