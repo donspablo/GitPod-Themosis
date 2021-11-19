@@ -2,10 +2,10 @@ FROM gitpod/workspace-mysql
 USER gitpod
 
 RUN sudo apt-get update 
-RUN sudo apt-get install -y git libzip-dev libmemcached-dev libz-dev curl libcurl4-gnutls-dev libjpeg-dev libssl-dev libmcrypt-dev curl   zip
+RUN sudo apt-get install -y apt-utils git libzip-dev libmemcached-dev libz-dev curl libcurl4-gnutls-dev libjpeg-dev libssl-dev libmcrypt-dev curl   zip
 RUN sudo apt-get clean
 RUN sudo curl --version
-RUN sudo RUN sudo apt upgrade -y
+RUN sudo apt upgrade -y
 RUN sudo add-apt-repository ppa:ondrej/php
 RUN sudo apt-get update
 RUN sudo apt-get install php7.1
