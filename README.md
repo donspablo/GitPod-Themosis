@@ -2,9 +2,9 @@
 
 Getting started with Themosis and Vagrant
 =========================================
-<a href="https://gitpod.io/#https://github.com/donPabloNow/themosis"><img width="250px" src="https://user-images.githubusercontent.com/6468571/142190677-9676154b-33b6-424b-99cc-f10d88ad030c.png" /></a>
+<a href="https://gitpod.io/#https://github.com/donPabloNow/GitPod-Themosis"><img width="250px" src="https://user-images.githubusercontent.com/6468571/142190677-9676154b-33b6-424b-99cc-f10d88ad030c.png" /></a>
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/donPabloNow/themosis)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/donPabloNow/GitPod-Themosis)
 
 An introduction to the Themosis framework while building a blog website.
 ------------------------------------------------------------------------
@@ -28,7 +28,7 @@ An introduction to the Themosis framework while building a blog website.
 7.  [WordPress routes](https://xn--dn-8bb.com/getting-started-with-the-themosis-framework-wordpress-routes-7-8-92c2e837869b?source=your_stories_page----------------------------------------)
 8.  [Wrap Up](https://xn--dn-8bb.com/getting-started-with-the-themosis-framework-wrap-up-8-8-3e992ea3a37?source=your_stories_page----------------------------------------)
 
-GitHub - donPabloNow/themosis: A framework for WordPress developers.
+GitHub - donPabloNow/GitPod-Themosis: A framework for WordPress developers.
 --------------------------------------------------------------------
 
 ### The Themosis framework is a tool aimed to WordPress developers of any levels. But the better WordPress and PHP…
@@ -164,7 +164,7 @@ Any help is appreciated. The project is open-source and we encourage you to part
 - Reporting a bug issue
 - Suggesting features
 - Sending a pull request with code fix or feature
-- Following the project on [GitHub](https://github.com/donpablonow/themosis)
+- Following the project on [GitHub](https://github.com/donPabloNow/GitPod-Themosis)
 - Following us on Twitter: [@Themosis](https://twitter.com/Themosis)
 - Sharing the project around your community
 
