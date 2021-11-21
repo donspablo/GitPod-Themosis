@@ -1,0 +1,71 @@
+version: "2"
+
+services:
+
+  # nginx:
+  #   container_name: nginx
+  #   build:
+  #     context: .
+  #     dockerfile: .docker/dev/nginx.dockerfile
+  #   links:
+  #     - themosis_A: themosis_A
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   env_file: .docker/dev/env/nginx.development.env
+  #   networks:
+  #     - themosis-network
+
+  themosis:
+    image: themosis
+    build:
+      context: .
+      dockerfile: .docker/dev/themosis/themosis.dockerfile
+    depends_on:
+      - db
+      - cache
+    volumes:
+      - ./themosis:/var/www
+      - .certs:/etc/nginx/certs
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - .docker/dev/env/db.development.env
+      - .docker/dev/env/themosis.development.env
+    # entrypoint: /entry-point.sh
+    networks:
+      - themosis-network
+
+  db:
+    image: mariadb
+    env_file: .docker/dev/env/db.development.env
+    volumes:
+      - db:/var/lib/mysql
+    expose:
+      - "3306"
+    networks:
+      - themosis-network
+
+  cache:
+    image: redis
+    volumes:
+      - cache:/var/lib/redis
+    expose:
+      - "6379"
+    networks:
+      - themosis-network
+
+networks:
+  themosis-network:
+    driver: bridge
+
+volumes:
+  # themosis:
+  #   driver: local
+  # certs:
+  #   driver: local
+  db:
+    external: true
+  cache:
+    external: true
